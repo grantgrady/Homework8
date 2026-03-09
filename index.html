@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 8 - Sound & Game States</title>
+    <script src="libs/p5.min.js"></script>
+    <script src="libs/p5.sound.min.js"></script>
+    <script src="js/food.js"></script>
+    <script src="js/sketch.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #1a1a2e;
+            font-family: 'Arial', sans-serif;
+            color: white;
+        }
+        canvas {
+            border: 3px solid #4a4a6a;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.7);
+        }
+        .instructions {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #16213e;
+            border-radius: 8px;
+            max-width: 800px;
+        }
+        .instructions h3 {
+            margin-top: 0;
+            color: #a3d8f4;
+        }
+        .sound-status {
+            color: #ffaa00;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        button {
+            background-color: #4a4a6a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #5a5a7a;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>🎮 Sound & Game States 🎮</h1>
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <p><strong>WASD</strong> to move your character</p>
+            <p><strong>🍎 GOOD FOOD (Red/Pink)</strong> - Increases score (+1)</p>
+            <p><strong>💀 BAD FOOD (Purple/Black)</strong> - Decreases health (-1)</p>
+            <p><strong>Start health: 5</strong> • Game ends when health reaches 0</p>
+            <p><strong>Click anywhere</strong> to start background music</p>
+            <p class="sound-status">🔊 Sound effects: Good food (positive chime) • Bad food (negative buzz)</p>
+        </div>
+        <button onclick="window.location.reload()">Restart Game</button>
+    </div>
+</body>
+</html>
